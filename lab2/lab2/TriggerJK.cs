@@ -97,5 +97,16 @@ namespace lab2
             }
             return (input1 == p.input1) && (input2 == p.input2);
         }
+
+
+        public static TriggerJK operator +( TriggerJK obj1,  TriggerJK obj2)
+        {
+            TriggerJK tr = new TriggerJK();
+            Console.WriteLine("8787654567890-9876543567890");
+            tr.input1 = (obj1.input1 && obj2.input1);    // 0 0
+            tr.input2 = (obj1.input2 && obj2.input2);    // 1 0 
+            Console.WriteLine(tr.input1 + " " + tr.input2);
+            return tr;
+        }
     }
 }

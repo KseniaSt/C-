@@ -8,20 +8,26 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
+     public delegate void MyDelegate();
+
     class Register
     {
         private string name;
         private List<Trigger> reg;
 
+        public event MyDelegate MyEvent = null;
         public Register(string name)
         {
             this.name = name;
             reg = new List<Trigger>();
         }
 
+       
+
         public void AddTrig(Trigger tr)
         {
             reg.Add(tr);
+            MyEvent.Invoke();
         }
         public Trigger GetTrig(int ind)
         {
@@ -53,5 +59,8 @@ namespace lab2
                 yield return tr;
             }
         }
+
+        
     }
+    
 }
