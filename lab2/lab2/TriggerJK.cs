@@ -83,20 +83,15 @@ namespace lab2
 
         public override bool Equals(System.Object obj)
         {
-            // If parameter is null return false.
             if (obj == null)
             {
                 return false;
             }
-
-            // If parameter cannot be cast to Point return false.
             TriggerJK p = obj as TriggerJK;
             if ((System.Object)p == null)
             {
                 return false;
             }
-
-            // Return true if the fields match:
             return (input1 == p.input1) && (input2 == p.input2);
         }
     }
