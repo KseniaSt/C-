@@ -41,5 +41,31 @@ namespace lab2
                     output = false;
             }
         }
+
+        public void GiveToKinput()
+        {
+            if (!input2)
+            {
+                if (!input1)
+                {
+                    input2 = true;
+                    output = false;
+                }
+                else
+                {
+                    input2 = true;
+                    output = !output;
+                }
+            }
+        }
+        public void RemoveFromKinput()
+        {
+            if (input2)
+            {
+                input2 = false;
+                if (input1)
+                    output = true;
+            }
+        }
     }
 }
