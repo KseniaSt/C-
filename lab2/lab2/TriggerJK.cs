@@ -80,7 +80,10 @@ namespace lab2
                     Convert.ToByte(input1), Convert.ToByte(input2), Convert.ToByte(output));
             return result;
         }
-
+        public override int GetHashCode()
+        {
+            return input1.GetHashCode() ^ input2.GetHashCode();
+        }
         public override bool Equals(System.Object obj)
         {
             if (obj == null)
