@@ -20,5 +20,6 @@ namespace lab2
                 return name;
             }
         }
+
     }
 }
