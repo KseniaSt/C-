@@ -67,5 +67,18 @@ namespace lab2
                     output = true;
             }
         }
+
+        public void ShowState()
+        {
+            Console.WriteLine(this.ToString());
+        }
+        public override string ToString()
+        {
+            string result = null;
+            result += string.Format("Trigger type: {0}\n", this.GetName);
+            result += string.Format("Trigger state:\nJ input:{0}\nK input:{1}\n Output:{2}",
+                    Convert.ToByte(input1), Convert.ToByte(input2), Convert.ToByte(output));
+            return result;
+        }
     }
 }
